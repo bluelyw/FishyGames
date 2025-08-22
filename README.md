@@ -26,6 +26,8 @@
 
 **立即开始游戏：** [https://bluelyw.github.io/FishyGames/](https://bluelyw.github.io/FishyGames/)
 
+> 游戏直接部署在GitHub Pages上，使用main分支，无需复杂的构建过程。
+
 ## 如何开始游戏
 
 ### 在线游玩
@@ -91,10 +93,14 @@
 
 ## 部署
 
-本项目使用GitHub Pages自动部署。每次推送到main分支时，GitHub Actions会自动构建并部署到GitHub Pages。
+本项目直接使用GitHub Pages部署，无需构建过程。
 
-### 部署状态
-![Deploy to GitHub Pages](https://github.com/bluelyw/FishyGames/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)
+### 部署方式
+- **分支**: main
+- **文件夹**: / (root)
+- **URL**: https://bluelyw.github.io/FishyGames/
+
+每次推送到main分支时，GitHub Pages会自动更新。
 
 ## 联系方式
 
