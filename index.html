@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="game_title">大鱼吃小鱼</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="simple-i18n.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="game-header">
+            <div class="score-container">
+                <span data-i18n="score">得分: </span>
+                <span id="score">0</span>
+            </div>
+            <div class="level-container">
+                <span data-i18n="level">等级: </span>
+                <span id="level">1</span>
+            </div>
+            <div class="control-buttons">
+                <div class="sound-control">
+                    <button id="muteButton" class="icon-button" title="静音/取消静音">🔊</button>
+                    <button id="soundSettingsButton" class="icon-button" title="音量设置">⚙️</button>
+                </div>
+                <div class="language-control">
+                    <button id="languageButton" class="icon-button" title="切换语言">🌐</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-container">
+            <canvas id="gameCanvas"></canvas>
+            
+            <div id="gameStart" class="game-screen">
+                <h1 data-i18n="game_title">大鱼吃小鱼</h1>
+                <p data-i18n="game_description">移动鼠标控制你的小鱼，吃掉比你小的鱼来成长，但要小心那些比你大的鱼！</p>
+                <button id="startButton" data-i18n="start_game">开始游戏</button>
+                <button id="showLeaderboardButton" class="secondary-button" data-i18n="view_leaderboard">查看排行榜</button>
+            </div>
+            
+            <div id="gameOver" class="game-screen hidden">
+                <h1 data-i18n="game_over">游戏结束</h1>
+                <p><span data-i18n="final_score">你的最终分数是</span>: <span id="finalScore">0</span></p>
+                <div id="nameInput" class="name-input-container">
+                    <input type="text" id="playerName" data-i18n="enter_name" placeholder="输入你的名字" maxlength="10">
+                    <button id="saveScoreButton" data-i18n="save_score">保存分数</button>
+                </div>
+                <button id="restartButton" data-i18n="restart">重新开始</button>
+                <button id="viewLeaderboardButton" class="secondary-button" data-i18n="view_leaderboard">查看排行榜</button>
+            </div>
+            
+            <div id="leaderboard" class="game-screen hidden">
+                <h1 data-i18n="leaderboard">排行榜</h1>
+                <div class="leaderboard-container">
+                    <table id="leaderboardTable">
+                        <thead>
+                            <tr>
+                                <th data-i18n="rank">排名</th>
+                                <th data-i18n="player">玩家</th>
+                                <th data-i18n="score">得分</th>
+                                <th data-i18n="date">日期</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboardBody">
+                            <!-- 排行榜数据将通过JavaScript动态添加 -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="leaderboard-buttons">
+                    <button id="backButton" class="secondary-button" data-i18n="back">返回</button>
+                    <button id="clearLeaderboardButton" class="danger-button" data-i18n="clear_leaderboard">清除排行榜</button>
+                </div>
+            </div>
+            
+            <div id="soundSettings" class="game-screen hidden">
+                <h1 data-i18n="sound_settings">音量设置</h1>
+                <div class="settings-container">
+                    <div class="volume-control">
+                        <label for="bgmVolume" data-i18n="bgm_volume">背景音乐音量:</label>
+                        <input type="range" id="bgmVolume" min="0" max="100" value="30">
+                        <span id="bgmVolumeValue">30%</span>
+                    </div>
+                    <div class="volume-control">
+                        <label for="sfxVolume" data-i18n="sfx_volume">音效音量:</label>
+                        <input type="range" id="sfxVolume" min="0" max="100" value="50">
+                        <span id="sfxVolumeValue">50%</span>
+                    </div>
+                </div>
+                <button id="closeSoundSettings" class="secondary-button" data-i18n="close">关闭</button>
+            </div>
+            
+            <div id="languageSettings" class="game-screen hidden">
+                <h1 data-i18n="language">语言</h1>
+                <p>请选择游戏语言：</p>
+                <div id="languageList">
+                    <!-- 语言按钮将通过JavaScript动态添加 -->
+                </div>
+                <button id="closeLanguageSettings" class="secondary-button" data-i18n="close">关闭</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html> 
