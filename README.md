@@ -22,8 +22,19 @@
 - 动态生成的游戏音效和背景音乐，无需外部音频文件
 - 支持30种语言的国际化功能，自动检测浏览器语言
 
+## 🎮 在线游戏
+
+**立即开始游戏：** [https://bluelyw.github.io/FishyGames/](https://bluelyw.github.io/FishyGames/)
+
 ## 如何开始游戏
 
+### 在线游玩
+1. 访问 [https://bluelyw.github.io/FishyGames/](https://bluelyw.github.io/FishyGames/)
+2. 点击"开始游戏"按钮
+3. 使用鼠标控制你的鱼，吃掉比你小的鱼并躲避比你大的鱼
+4. 游戏结束后，输入你的名字并保存分数到排行榜
+
+### 本地运行
 1. 将游戏文件下载到本地
 2. 使用浏览器打开index.html文件
 3. 点击"开始游戏"按钮
@@ -78,6 +89,13 @@
 
 本游戏代码可以自由使用和修改。
 
+## 部署
+
+本项目使用GitHub Pages自动部署。每次推送到main分支时，GitHub Actions会自动构建并部署到GitHub Pages。
+
+### 部署状态
+![Deploy to GitHub Pages](https://github.com/bluelyw/FishyGames/workflows/Deploy%20to%20GitHub%20Pages/badge.svg)
+
 ## 联系方式
 
-如有问题或建议，请通过[GitHub Issues](https://github.com/yourusername/big-fish-game/issues)提交。 
+如有问题或建议，请通过[GitHub Issues](https://github.com/bluelyw/FishyGames/issues)提交。 
